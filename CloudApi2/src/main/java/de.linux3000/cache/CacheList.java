@@ -1,23 +1,20 @@
 package de.linux3000.cache;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class CacheList<T extends CacheValue>{
+public class CacheList <T extends CacheValue> implements ICacheList<T>{
 
-    private final List<T> cache = new ArrayList<>();
+    private List<T> cache = new ArrayList<>();
 
-
+    @Override
     public List<T> getCache() {
         return cache;
     }
 
+    @Override
     public void update(T toAdd) {
-        if(cache.contains(toAdd)) {
-            cache.remove(toAdd);
-        }
+        cache.remove(toAdd);
         cache.add(toAdd);
     }
-
 }

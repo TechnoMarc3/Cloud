@@ -1,5 +1,7 @@
 package de.linux3000.player;
 
+import de.linux3000.player.ICloudPlayer;
+
 import java.util.UUID;
 
 public class CloudPlayer implements ICloudPlayer {

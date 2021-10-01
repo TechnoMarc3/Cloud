@@ -1,6 +1,12 @@
-de\linux3000\API.class
+de\linux3000\manager\DefaultPlayerManager.class
 de\linux3000\player\ICloudPlayer.class
+de\linux3000\cache\ICacheList.class
+de\linux3000\server\CloudServer.class
+de\linux3000\API.class
+de\linux3000\server\ICloudServer.class
 de\linux3000\cache\CacheList.class
+de\linux3000\manager\CloudServerManager.class
+de\linux3000\manager\AbstractCloudPlayerManager.class
 de\linux3000\player\CloudPlayer.class
 de\linux3000\cache\CacheValue.class
 de\linux3000\manager\PlayerManager.class

@@ -1,13 +1,13 @@
 package de.linux3000.manager;
 
-import de.linux3000.cache.CacheList;
+import de.linux3000.cache.ICacheList;
 import de.linux3000.player.ICloudPlayer;
 
 
-public class PlayerManager extends CacheList<ICloudPlayer> {
+public interface PlayerManager extends ICacheList<ICloudPlayer> {
 
 
-    public ICloudPlayer getCloudPlayer(String name) {
+    default ICloudPlayer getCloudPlayer(String name) {
         for(ICloudPlayer player : getCache()) {
             if(player.playerName().equalsIgnoreCase(name)) {
                 return player;
@@ -15,5 +15,7 @@ public class PlayerManager extends CacheList<ICloudPlayer> {
         }
         return null;
     }
+
+    void kickPlayer(ICloudPlayer player);
 
 }
